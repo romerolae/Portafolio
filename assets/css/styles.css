@@ -1,0 +1,92 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*===== tipografía mobile =====*/
+
+/*===== Colores =====*/
+:root {
+	--color-violet: #8e7bef;
+	--color-blue-light: #5d3bef;
+	--color-white-transparent: #f9f6ff;
+	--color-deep-black: #222222;
+	--color-black: #423f40;
+	--color-white: #ffffff;
+	--color-transparent-white: #f9f5f2;
+}
+html,
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: var(--color-deep-black);
+}
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/* layout */
+.container {
+	width: 90%;
+	max-width: 1080px;
+	margin: auto;
+}
+
+/* Intro */
+
+.intro {
+	min-height: 100vh;
+	background-color: var(--color-white);
+}
+
+nav {
+	background-color: var(--color-violet);
+	max-height: 100vh;
+	transition: max-height 1s;
+}
+nav a,
+.icon-menu {
+	color: var(--color-deep-black);
+	font-weight: 600;
+	padding: 5px 10px;
+	display: inline-block;
+}
+
+.right-angle-menu {
+	text-align: right;
+}
+
+.hidden {
+	/* display: none; */
+	max-height: 0;
+	overflow: hidden;
+}
+
+/* mediaquery desktop */
+
+@media (min-width: 992px) {
+	.lg-hidden {
+		display: none;
+	}
+	#main-menu {
+		max-height: none;
+	}
+
+	nav {
+		background-color: transparent;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	nav li {
+		display: inline-block;
+	}
+}
