@@ -34,7 +34,7 @@ ul {
 }
 
 /* layout */
-.container {
+.container-header {
 	width: 90%;
 	max-width: 1080px;
 	margin: auto;
@@ -43,7 +43,7 @@ ul {
 /* Intro */
 
 .intro {
-	min-height: 100vh;
+	min-height: 0px;
 	background-color: var(--color-white);
 }
 
@@ -58,6 +58,8 @@ nav a,
 	font-weight: 600;
 	padding: 5px 10px;
 	display: inline-block;
+	margin-top: 20px;
+	font-size: 25px;
 }
 
 .right-angle-menu {
@@ -72,6 +74,64 @@ nav a,
 
 .col-md-6 {
 	padding: 10px;
+}
+
+/* =======Home========= */
+.home__title {
+	font-size: 50px;
+}
+
+.container-home p {
+	font-size: 24px;
+}
+
+.container-home {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	max-width: 1080px;
+}
+
+.social-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 40px;
+	position: relative;
+	top: -50px;
+}
+
+.social-icons {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: var(--color-blue-light);
+	border: 2.5px solid var(--color-white);
+}
+
+/* =========Boton contactame ===========*/
+
+.button-contact-me {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 90px;
+	max-width: 100%;
+	background-color: var(--color-blue-light);
+	margin: 0 15px;
+}
+
+.button-contact-me a {
+	color: var(--color-white);
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 200;
+}
+
+.button {
+	padding: 40px;
 }
 
 /* Components */
@@ -111,5 +171,28 @@ nav a,
 
 	nav li {
 		display: inline-block;
+	}
+
+	/* =======Home========= */
+
+	.seccion-home {
+		display: flex;
+
+		justify-content: flex-end;
+		align-items: end;
+		margin: 6%;
+		padding: 0 10%;
+	}
+
+	.container-home img {
+		position: absolute;
+		left: 20%;
+	}
+	.container-home h1,
+	p {
+		position: relative;
+		top: -60px;
+		right: -30px;
+		bottom: 20px;
 	}
 }
