@@ -40,6 +40,14 @@ ul {
 	margin: auto;
 }
 
+/* .text-center {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.section {
+	padding: 1rem;
+} */
 /* Intro */
 
 .intro {
@@ -134,7 +142,61 @@ nav a,
 	padding: 40px;
 }
 
-/* Components */
+/* <!-- ===========Acerca de mi============= --> */
+.info-about {
+	padding: 0 20px;
+	max-width: 1080px;
+	overflow: auto;
+}
+.about-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 10px;
+}
+
+.about-section h2 {
+	color: var(--color-deep-black);
+	margin-bottom: 20px;
+	padding: 10px 10px;
+	margin-top: 10%;
+}
+.about-section p {
+	color: var(--color-black);
+	text-align: justify;
+	line-height: 2rem;
+	font-size: 20px;
+}
+/* =======my skills============= */
+
+/* .container-skills {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+} */
+
+/* .skills-cards {
+	background-color: var(--color-violet);
+	padding: 1rem 1.5rem;
+	width: 250px;
+	min-width: 250px;
+	text-align: center;
+}
+
+.image-card {
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+.card-subtitle {
+	display: flex;
+	gap: 0.5rem;
+	padding: 0.5rem;
+} */
+
+/* Components cards*/
 .card {
 	text-align: center;
 	background-color: var(--color-blue-light);
@@ -173,6 +235,10 @@ nav a,
 		display: inline-block;
 	}
 
+	.intro {
+		min-height: 90px;
+	}
+
 	/* =======Home========= */
 
 	.seccion-home {
@@ -180,7 +246,7 @@ nav a,
 
 		justify-content: flex-end;
 		align-items: end;
-		margin: 6%;
+		margin: 3%;
 		padding: 0 10%;
 	}
 
@@ -194,5 +260,25 @@ nav a,
 		top: -60px;
 		right: -30px;
 		bottom: 20px;
+	}
+
+	/* <!-- ===========Acerca de mi============= --> */
+	.info-about {
+		display: flex;
+		margin: 0 auto;
+	}
+
+	.about-section {
+		text-align: center;
+	}
+
+	.about-section h2 {
+		font-size: 45px;
+		margin-bottom: 10%;
+		padding: 5px 10px;
+	}
+
+	.about-section p {
+		text-align: center;
 	}
 }
