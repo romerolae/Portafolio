@@ -397,17 +397,13 @@ footer p {
 	}
 }
 
-/* mediaquery desktop */
+/* =============mediaquery desktop ============================================*/
 
-@media screen and (min-width: 860px) {
-	body {
-		overflow-y: hidden;
-	}
-
+@media screen and (min-width: 600px) {
 	.lg-hidden {
 		display: none;
 	}
-	#main-menu {
+	.main_menu {
 		max-height: none;
 		background-color: transparent;
 		flex-direction: row;
@@ -424,60 +420,67 @@ footer p {
 	}
 
 	.section {
-		padding: 1rem 5rem;
+		border: 1px dashed blue;
+		max-width: 1100px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	/* =======Home========= */
 
-	.social-container {
-		top: 0;
-	}
-
-	.social-icons {
-		width: 60px;
-		height: 60px;
-	}
-
-	.seccion-home {
-		display: flex;
-
-		justify-content: flex-end;
-		align-items: end;
-		margin: 3%;
-		padding: 0 10%;
-	}
 	.container-header {
+		border: 1px solid green;
 		display: flex;
 		justify-content: center;
 	}
 
+	.social-icons {
+		width: 50px;
+		height: 50px;
+	}
+
+	.seccion-home {
+		border: 1px dashed blue;
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.container-home {
-		margin: 0 20px;
+		border: 1px solid red;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2px;
 	}
 
 	.container-home img {
-		position: absolute;
-		left: 8%;
-		top: 10%;
+		grid-column-end: 1;
+		grid-row-start: 1;
 	}
 	.container-home h1,
 	.container-home p {
-		position: relative;
-		top: 0p;
-		right: -30px;
-		bottom: 20px;
+		grid-column-start: 2;
+	}
+
+	.home__titleContainer {
+		grid-column-start: 2;
+	}
+
+	.social-container {
+		grid-column-start: 2;
+		grid-row-start: 3;
+		align-self: center;
 	}
 
 	.button-contact-me {
+		grid-column-start: 2;
+		grid-row-start: 3;
 		height: 40px;
 		width: 100%;
 		background-color: var(--color-blue-light);
-		margin: 0 auto;
-		position: relative;
-		right: -5%;
-		top: 40px;
+		align-self: center;
+		margin-right: 2rem;
 	}
-
 	/* <!-- ===========Acerca de mi============= --> */
 	.info-about {
 		display: flex;
