@@ -69,10 +69,10 @@ ul {
 }
 
 .hero {
-	width: 100%;
-	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: var(--color-white);
-	/* border: 1px solid red; */
+	padding-top: 50px;
 	display: flex;
 	color: rgb(6, 14, 56);
 	align-items: center;
@@ -96,12 +96,11 @@ ul {
 
 .hero__nav__contenedor {
 	display: flex;
-	height: inherit;
 	max-width: 900px;
 	margin: 0 auto;
-	padding: 0 20px;
 	align-items: center;
 	justify-content: space-between;
+	margin-left: 40px;
 }
 
 .hero__nav .logo {
@@ -208,9 +207,17 @@ nav a,
 
 /* =======Home========= */
 .home__title {
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
-
+.home__titleContainer {
+	padding-left: 50px;
+}
+.secondPart {
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	top: -40px;
+}
 .seccion-home img {
 	border-radius: 0% 0% 5% 5%;
 	/* box-shadow: 5px 10px #888888; */
@@ -388,7 +395,6 @@ nav a,
 	display: flex;
 	justify-content: center;
 	padding: 2rem 1rem;
-	gap: 2rem;
 }
 .icons-contacto {
 	text-align: center;
@@ -600,6 +606,9 @@ nav a,
 		height: 100px;
 	}
 
+	.hero__nav .logo {
+		margin-top: 20px;
+	}
 	.section {
 		max-width: 1100px;
 		margin-left: auto;
@@ -607,14 +616,10 @@ nav a,
 	}
 	.hero__nav__contenedor {
 		justify-content: space-around;
+		margin: 0 auto;
 	}
 
 	/* =======Home========= */
-
-	.container-header {
-		display: flex;
-		justify-content: center;
-	}
 
 	.social-icons {
 		width: 50px;
@@ -628,42 +633,40 @@ nav a,
 		margin-right: auto;
 	}
 
-	.container-home {
-		/* border: 1px solid red; */
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 5px;
+	.firstPart {
+		display: flex;
+		gap: 20px;
 	}
 
-	.container-home img {
-		padding-right: px;
-		grid-column-end: 1;
-		grid-row-start: 1;
+	.imgProfile {
+		position: relative;
+		top: 40px;
+		z-index: 2;
+	}
+
+	.secondPart {
+		display: flex;
+		flex-direction: column;
+		align-self: flex-end;
+		width: 350px;
+		position: relative;
+		top: -40px;
+		z-index: 3;
 	}
 
 	.home__titleContainer {
-		align-self: center;
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
+		order: 2;
 
-	.social-container {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		grid-auto-columns: auto;
+		margin-top: 86px;
 	}
 
 	.button-contact-me {
-		grid-column-start: 1;
-		grid-column-end: 3;
-
 		height: 40px;
 		width: 100%;
 		background-color: var(--color-blue-light);
 		align-self: center;
 		margin-right: 2rem;
 	}
-	*/
 	/* <!-- ===========Acerca de mi============= --> */
 	.info-about {
 		display: flex;
