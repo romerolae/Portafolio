@@ -31,3 +31,58 @@ heroMenu.addEventListener('click', function (e) {
 		heroMenu.classList.remove('active');
 	}
 });
+
+/* Secciones con ID */
+window.addEventListener('scroll', function (e) {
+	const scrollY = window.pageYOffset;
+
+	for (const section of sections) {
+		const sectionHeight = section.offsetHeight;
+		const sectionTop = section.offsetTop - 58;
+		const sectionId = section.getAttribute('id');
+
+		const current = document.querySelector(
+			'.hero__nav-link[href*=' + sectionId + ']'
+		);
+
+		if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+			current.classList.add('active');
+		} else {
+			current.classList.remove('active');
+		}
+	}
+});
+
+/* Formulario */
+
+form.addEventListener('submit', function (e) {
+	e.preventDefault();
+
+	const email = 'romerolaedev@gmail.com';
+	const URL_BASE = `https://formsubmit.co/ajax/${email}`;
+
+	const input = e.currentTarget.elements;
+	const dataForm = {
+		name: input.name.value,
+		email: input.email.value,
+		message: input.message.value,
+	};
+
+	const formData = {
+		name: input.name.value,
+		email: input.email.value,
+		message: input.message.value,
+	};
+
+	window.fetch(URL_BASE, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+			Accept: 'application/json',
+		},
+		body: JSON.stringify(dataForm),
+	});
+
+	alert('Tu mensaje se envió correctamente');
+	e.currentTarget.reset();
+});
